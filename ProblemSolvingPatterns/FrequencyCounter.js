@@ -6,6 +6,9 @@
 // same([1,2,3],[1,4]) ; false
 
 function same(inputArr,squareArr){
+    if(inputArr.length !== squareArr.length){
+        return false ;
+    }
     var inputObj = {} ;
     var squareObj = {} ;
     inputArr.forEach(element => {
@@ -15,8 +18,11 @@ function same(inputArr,squareArr){
         squareObj[element] = ++squareObj[element] ||  1
     }) ;
 
-    console.log(inputObj) ;
-    console.log(squareObj) ;
+    for(let key in inputObj){
+        if(!(key**2 in squareObj)){
+            
+        }
+    }
 }
 
 same([1,1,1,2,4,5,6],[1,2,3,3,4,5]) ;
